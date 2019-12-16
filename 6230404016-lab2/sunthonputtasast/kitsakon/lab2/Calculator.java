@@ -1,6 +1,6 @@
 /**
 * Calculator which can add, subtract, multiply, or divide any  decimal numbers.
-* The program also displays the execution time since the program runnings until the user types “q” or “Q”.
+* The program also displays the execution time since the program runnings until the user types "q" or "Q".
 * if mark is / ,the seccond number can't be a Zero(0)
 *
 * Author: Kitsakon Sunthonputtasast
