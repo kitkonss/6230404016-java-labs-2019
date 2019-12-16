@@ -26,25 +26,24 @@ public class Calculator {
             System.out.println("The seccond operand cannot be zero");
             return;
         } else {
-            System.out.println("Unknow operation");
-            System.exit(1);
+            double result = 0;
+            String operation = args[0];
+            double firstNum = Double.parseDouble(args[1]);
+            double seccondNum = Double.parseDouble(args[2]);
+            if (operation.equals("+")) {
+                result = firstNum + seccondNum;
+            } else if (operation.equals("-")) {
+                result = firstNum - seccondNum;
+            } else if (operation.equals("/")) {
+                result = firstNum / seccondNum;
+            } else if (operation.equals("x")) {
+                result = firstNum * seccondNum;
+            } else {
+                System.out.println("Unknow operation");
+                return;
+            }
+            System.out.println(firstNum + " " + operation + " " + seccondNum + " = " + df.format(result));
         }
-        double result = 0;
-        String operation = args[0];
-        double firstNum = Double.parseDouble(args[1]);
-        double seccondNum = Double.parseDouble(args[2]);
-        if (operation.equals("+")) {
-            result = firstNum + seccondNum;
-        } else if (operation.equals("-")) {
-            result = firstNum - seccondNum;
-        } else if (operation.equals("/")) {
-            result = firstNum / seccondNum;
-        } else if (operation.equals("x")) {
-            result = firstNum * seccondNum;
-        } else if (operation.equals("%")) {
-            result = firstNum % seccondNum;
-        }
-        System.out.println(firstNum + " " + operation + " " + seccondNum + " = " + df.format(result));
 
     }
 }

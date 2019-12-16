@@ -11,13 +11,18 @@
 *
 **/
 package sunthonputtasast.kitsakon.lab2;
+
 public class Athlete {
     public static void main(String[] args) {
-        String athleteName = args[0];
-        String sportName = args[1];
-        String athleteNationality = args[2];
-        System.out.println("My favorite athlete is " + athleteName + " who plays " + sportName + " and has nationality as " + athleteNationality); 
-
+        if (args.length != 3) {
+            System.out.println("<athlete_name> <sport_name> <athlete_nationality>");
+        } else {
+            String athleteName = args[0];
+            String sportName = args[1];
+            String athleteNationality = args[2];
+            System.out.println("My favorite athlete is " + athleteName + " who plays " + sportName
+                    + " and has nationality as " + athleteNationality);
+        }
 
     }
 }
