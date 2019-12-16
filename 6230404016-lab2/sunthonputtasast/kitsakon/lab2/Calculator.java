@@ -19,6 +19,9 @@ public class Calculator {
         if (args[0].equals("q") || args[0].equals("Q")) {
             System.out.println("Quitting the program");
             return;
+        } else if (args.length != 3) {
+            System.out.println("Calculator <operation> <firstNum> <seccondNum>");
+            return;
         } else if (args[0].equals("/") && args[2].equals("0")) {
             System.out.println("The seccond operand cannot be zero");
             return;
