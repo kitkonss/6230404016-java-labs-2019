@@ -1,5 +1,7 @@
 /**
- * * Author: Kitsakon Sunthonputtasast
+ * count vowels in the sentences.
+*
+* Author: Kitsakon Sunthonputtasast
 * ID: 623040401-6
 * Sec: 1
 * Date: December 16, 2019

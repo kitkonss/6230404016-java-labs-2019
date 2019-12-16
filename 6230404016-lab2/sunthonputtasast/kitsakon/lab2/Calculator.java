@@ -1,5 +1,9 @@
 /**
- * * Author: Kitsakon Sunthonputtasast
+* Calculator which can add, subtract, multiply, or divide any  decimal numbers.
+* The program also displays the execution time since the program runnings until the user types “q” or “Q”.
+* if mark is / ,the seccond number can't be a Zero(0)
+*
+* Author: Kitsakon Sunthonputtasast
 * ID: 623040401-6
 * Sec: 1
 * Date: December 16, 2019
@@ -22,22 +26,22 @@ public class Calculator {
             System.out.println("Unknow operation");
             System.exit(1);
         }
-            double result = 0;
-            String operation = args[0];
-            double firstNum = Double.parseDouble(args[1]);
-            double seccondNum = Double.parseDouble(args[2]);
-            if (operation.equals("+")) {
-                result = firstNum + seccondNum;
-            } else if (operation.equals("-")) {
-                result = firstNum - seccondNum;
-            } else if (operation.equals("/")) {
-                result = firstNum / seccondNum;
-            } else if (operation.equals("x")) {
-                result = firstNum * seccondNum;
-            } else if (operation.equals("%")) {
-                result = firstNum % seccondNum;
-            }
-            System.out.println(firstNum + " " + operation + " " + seccondNum + " = " + df.format(result));
-        
+        double result = 0;
+        String operation = args[0];
+        double firstNum = Double.parseDouble(args[1]);
+        double seccondNum = Double.parseDouble(args[2]);
+        if (operation.equals("+")) {
+            result = firstNum + seccondNum;
+        } else if (operation.equals("-")) {
+            result = firstNum - seccondNum;
+        } else if (operation.equals("/")) {
+            result = firstNum / seccondNum;
+        } else if (operation.equals("x")) {
+            result = firstNum * seccondNum;
+        } else if (operation.equals("%")) {
+            result = firstNum % seccondNum;
+        }
+        System.out.println(firstNum + " " + operation + " " + seccondNum + " = " + df.format(result));
+
     }
 }
