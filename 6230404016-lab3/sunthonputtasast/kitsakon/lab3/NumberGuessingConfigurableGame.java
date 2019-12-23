@@ -8,13 +8,23 @@
 * ID: 623040401-6
 * Sec: 1
 * Date: December 23, 2019
-*
 **/
 package sunthonputtasast.kitsakon.lab3;
 
 import java.util.Scanner;
 
 public class NumberGuessingConfigurableGame {
+
+    static int answer, min, max, numTries;
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        configure();
+        genAnswer();
+        playGame();
+
+    }
+
     static void configure() {
         Scanner input = new Scanner(System.in);
         NumberGuessingConfigurableGame.input = input;
@@ -113,14 +123,4 @@ public class NumberGuessingConfigurableGame {
         }
     }
 
-    static int answer, min, max, numTries;
-
-    static Scanner input = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        configure();
-        genAnswer();
-        playGame();
-
-    }
 }

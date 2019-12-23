@@ -12,6 +12,13 @@ package sunthonputtasast.kitsakon.lab3;
 import java.util.Scanner;
 
 public class NumberGuessingMethodGame {
+
+    static int answer;
+
+    public static void main(String[] args) {
+        genAnswer();
+        playGame();
+    }
     static void genAnswer() {
         int answer = 1 + (int) (10 * Math.random());
         NumberGuessingMethodGame.answer = answer;
@@ -45,10 +52,4 @@ public class NumberGuessingMethodGame {
         }
     }
 
-    static int answer;
-
-    public static void main(String[] args) {
-        genAnswer();
-        playGame();
-    }
 }
