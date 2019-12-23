@@ -21,7 +21,7 @@ public class NumberGuessingGame {
         boolean correct = false;
 
         while (true) {
-            if (correct || guessNum > 5 )
+            if (correct || guessNum > 5)
                 break;
             System.out.print("Enter an integer between 1 and 10:");
             int yourGuess = input.nextInt();

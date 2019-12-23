@@ -19,6 +19,7 @@ public class NumberGuessingMethodGame {
         genAnswer();
         playGame();
     }
+
     static void genAnswer() {
         int answer = 1 + (int) (10 * Math.random());
         NumberGuessingMethodGame.answer = answer;
