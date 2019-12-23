@@ -1,3 +1,12 @@
+/**
+ * You can guess the number from 1 to 10.
+ * You can try only 5 times.
+* Author: Kitsakon Sunthonputtasast
+* ID: 623040401-6
+* Sec: 1
+* Date: December 23, 2019
+*
+**/
 package sunthonputtasast.kitsakon.lab3;
 
 import java.util.Scanner;
@@ -17,9 +26,9 @@ public class NumberGuessingGame {
             System.out.print("Enter an integer between 1 and 10:");
             int yourGuess = input.nextInt();
             correct = (yourGuess == secretNum);
-            if (secretNum > yourGuess && guessNum < 5)
+            if (secretNum > yourGuess) // && guessNum < 5)
                 System.out.println("Try a higher number!");
-            if (secretNum < yourGuess && guessNum < 5)
+            if (secretNum < yourGuess) // && guessNum < 5)
                 System.out.println("Try a lower number!");
             guessNum += 1;
             num += 1;

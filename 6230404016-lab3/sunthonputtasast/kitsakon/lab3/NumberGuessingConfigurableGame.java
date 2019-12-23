@@ -1,3 +1,15 @@
+/**
+ * You can guess the number from min to max.
+ * You can try only numTries times.
+ * If the game over.You can input Y or y to play again.
+ * If you input an integer more than max or input an integer less than min,
+ * It shows The number must be between  + min +  and + max
+* Author: Kitsakon Sunthonputtasast
+* ID: 623040401-6
+* Sec: 1
+* Date: December 23, 2019
+*
+**/
 package sunthonputtasast.kitsakon.lab3;
 
 import java.util.Scanner;
