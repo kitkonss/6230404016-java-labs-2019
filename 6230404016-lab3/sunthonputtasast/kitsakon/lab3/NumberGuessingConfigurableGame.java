@@ -54,7 +54,7 @@ public class NumberGuessingConfigurableGame {
     static void playGame() {
         System.out.println("Welcome to a number guessing game!");
         int guessNum = 1;
-        int num = 0;
+        int count = 0;
         boolean correct = false;
         while (true) {
             if (correct || guessNum > numTries)
@@ -66,22 +66,23 @@ public class NumberGuessingConfigurableGame {
                 System.out.println("The number must be between " + min + " and " + max);
                 guessNum -= 1;
             }
-            if (answer > yourGuess && guessNum < numTries && yourGuess >= min && yourGuess <= max)
+            if (answer > yourGuess && yourGuess >= min && yourGuess <= max)
                 System.out.println("Try a higher number!");
-            if (answer < yourGuess && guessNum < numTries && yourGuess >= min && yourGuess <= max)
+            if (answer < yourGuess && yourGuess >= min && yourGuess <= max)
                 System.out.println("Try a lower number!");
             guessNum += 1;
-            num += 1;
+            count += 1;
         }
         if (correct) {
             System.out.println("Congratulations!");
-            System.out.println("You have tried " + num + " times ");
+            System.out.println("You have tried " + count + " times ");
             boolean playAgain = false;
             String again = "y";
             while (true) {
                 if (playAgain || again == "y")
                     System.out.print("Want to play again (Y or y):");
-                String user = input.next();
+                Scanner temp = new Scanner(System.in);
+                String user = temp.nextLine();
                 playAgain = (user.equals("y") || user.equals("Y"));
                 if (user.equals("y") || user.equals("Y")) {
                     playGame();
@@ -94,11 +95,12 @@ public class NumberGuessingConfigurableGame {
             System.out.println("You have tried " + numTries + " times. You ran out of guesses");
             System.out.println("The answer is " + answer);
             boolean playAgain = false;
-            String again = "y";
+            String again = "";
             while (true) {
-                if (playAgain || again == "y")
+                if (playAgain || again.equals(""))
                     System.out.print("Want to play again (Y or y):");
-                String user = input.next();
+                Scanner temp = new Scanner(System.in);
+                String user = temp.nextLine();
                 playAgain = (user.equals("y") || user.equals("Y"));
                 if (user.equals("y") || user.equals("Y")) {
                     playGame();

@@ -17,7 +17,7 @@ public class NumberGuessingGame {
         Scanner input = new Scanner(System.in);
         int secretNum = 1 + (int) (10 * Math.random());
         int guessNum = 1;
-        int num = 0;
+        int count = 0;
         boolean correct = false;
 
         while (true) {
@@ -31,11 +31,11 @@ public class NumberGuessingGame {
             if (secretNum < yourGuess) // && guessNum < 5)
                 System.out.println("Try a lower number!");
             guessNum += 1;
-            num += 1;
+            count += 1;
         }
         if (correct) {
             System.out.println("Congratulations!");
-            System.out.println("You have tried " + num + " times");
+            System.out.println("You have tried " + count + " times");
 
         } else {
             System.out.println("You have tried 5 times. You ran out of guesses");
