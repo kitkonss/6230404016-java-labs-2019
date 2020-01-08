@@ -9,13 +9,14 @@ import java.time.Period;
 public class PersonV2 extends Person {
     private LocalDate dob;
 
-    public PersonV2(String name, double height, double weight, String newDob) {
+    public PersonV2(String newName, double newHeight, double newWeight, String newDob) {
 
         // inheritance name hight and weight from class Person
-        super(name, height, weight);
+        super(newName, newHeight, newWeight);
 
         // To initialize the value of dob
         this.dob = LocalDate.parse(newDob);
+        
     }
 
     public LocalDate getDOB() {
@@ -26,6 +27,7 @@ public class PersonV2 extends Person {
         this.dob = newDob;
     }
 
+    // Check if the to day is object's birthday or not.
     public void isBirthday() {
         LocalDate presentDate = LocalDate.now();
 
@@ -42,6 +44,7 @@ public class PersonV2 extends Person {
 
     }
 
+    // Check how old of object.
     public void howOld() {
         LocalDate dayOfBirth = this.dob;
         LocalDate presentDay = LocalDate.now();
@@ -57,6 +60,7 @@ public class PersonV2 extends Person {
 
     }
 
+    // Compare age who is older.
     public void compareAge(PersonV2 other) {
 
         String thisName = this.getName();

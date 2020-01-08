@@ -12,7 +12,7 @@ public class Person {
     private double weight; // unit is metre.
     private static int numberOfPerson = 0;
 
-    // Created constructor.
+    // Created constructor with no parameter.
     public Person() {
         this.name = "unknow";
         this.height = 0.0f;
@@ -20,6 +20,7 @@ public class Person {
         numberOfPerson++;
     }
 
+    // Created constructor with a parameter: 
     public Person(String newName) {
         this.name = newName;
         this.height = 0.0f;
@@ -27,6 +28,7 @@ public class Person {
         numberOfPerson++;
     }
 
+    // / Constructor with 3 parameters: name, height, weight
     public Person(String newName, double newHeight, double newWeight) {
         this.name = newName;
         this.height = newHeight;
@@ -58,6 +60,7 @@ public class Person {
         this.weight = newWeight;
     }
 
+    // Show informations of the object.
     @Override
     public String toString() {
         return "name=" + name + ',' + " height=" + height + "cm." + " weight=" + weight + "kg.";
