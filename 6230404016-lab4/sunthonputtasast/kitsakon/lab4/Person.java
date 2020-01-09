@@ -7,12 +7,14 @@ package sunthonputtasast.kitsakon.lab4;
  */
 
 public class Person {
+    // Create object's variables.
     private String name;
     private double height; // unit is kg.
     private double weight; // unit is metre.
+    // Create class's variable.
     private static int numberOfPerson = 0;
 
-    // Created constructor with no parameter.
+    // Create constructor with no parameter.
     public Person() {
         this.name = "unknow";
         this.height = 0.0f;
@@ -20,7 +22,7 @@ public class Person {
         numberOfPerson++;
     }
 
-    // Created constructor with a parameter: 
+    // Create constructor with a parameter: 
     public Person(String newName) {
         this.name = newName;
         this.height = 0.0f;
@@ -35,27 +37,33 @@ public class Person {
         this.weight = newWeight;
         numberOfPerson++;
     }
-
+    
+    // get object's name.
     public String getName() {
         return this.name;
     }
 
+    // set object's name.
     public void setName(String newName) {
         this.name = newName;
     }
 
+    // get object's height.
     public double getHeight() {
         return this.height;
     }
 
+    // set object's height.
     public void setHeight(double newHeight) {
         this.height = newHeight;
     }
 
+    // get object's weight.
     public double getWeight() {
         return this.weight;
     }
 
+    // set object's weight.
     public void setWeight(double newWeight) {
         this.weight = newWeight;
     }

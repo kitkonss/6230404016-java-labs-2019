@@ -7,6 +7,7 @@ import java.time.Period;
  * PersonV2
  */
 public class PersonV2 extends Person {
+    // Created variable dob.
     private LocalDate dob;
 
     public PersonV2(String newName, double newHeight, double newWeight, String newDob) {
@@ -16,13 +17,15 @@ public class PersonV2 extends Person {
 
         // To initialize the value of dob
         this.dob = LocalDate.parse(newDob);
-        
+
     }
 
+    // get date of birth.
     public LocalDate getDOB() {
         return this.dob;
     }
 
+    // set date of birth.
     public void setDOB(LocalDate newDob) {
         this.dob = newDob;
     }
@@ -99,6 +102,7 @@ public class PersonV2 extends Person {
 
     @Override
     public String toString() {
+        // get toString() from Person
         super.toString();
         return super.toString() + ", Birthday=" + dob;
     }
