@@ -40,7 +40,6 @@ public class Student extends PersonV2 {
     @Override
     public String toString() {
         // get toString() from PersonV2
-        super.toString();
         return super.toString() + ", major=" + major + ", GPA=" + GPA;
     }
 

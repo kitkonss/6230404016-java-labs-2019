@@ -52,7 +52,7 @@ public class PersonV2 extends Person {
         LocalDate dayOfBirth = this.dob;
         LocalDate presentDay = LocalDate.now();
 
-        Period person = Period.between(dayOfBirth, presentDay.minusDays(1));
+        Period person = Period.between(dayOfBirth, presentDay);
 
         int getYear = person.getYears();
         int getMonth = person.getMonths();
@@ -103,7 +103,6 @@ public class PersonV2 extends Person {
     @Override
     public String toString() {
         // get toString() from Person
-        super.toString();
         return super.toString() + ", Birthday=" + dob;
     }
 }

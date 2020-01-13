@@ -14,9 +14,9 @@ public class TestPersonV3 {
         zuckerberg.howOld();
         System.out.println(Person.getNumberOfPerson() + " persons have been created.");
         PersonV2 mickeyMouse = new PersonV2("Mickey Mouse", 60, 25, "1982-01-01");
-        Student mickey_Mouse = new Student("Mickey Mouse", 60, 25, "1982-01-01", "Animation", 3);
+        Student mickey_mouse = new Student("Mickey Mouse", 60, 25, "1982-01-01", "Animation", 3);
         System.out.println(mickeyMouse);
-        System.out.println(mickey_Mouse);
+        System.out.println(mickey_mouse);
         System.out.println(Person.getNumberOfPerson() + " persons have been created.");
     }
 }

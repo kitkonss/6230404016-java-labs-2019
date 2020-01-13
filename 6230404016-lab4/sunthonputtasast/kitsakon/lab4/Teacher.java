@@ -41,7 +41,6 @@ public class Teacher extends PersonV2 {
     @Override
     public String toString() {
         // get toString() from PersonV2
-        super.toString();
         return super.toString() + ", teachingSubject=" + teachingSubject + ", salary=" + salary;
     }
 
