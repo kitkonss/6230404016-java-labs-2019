@@ -32,6 +32,7 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    // Calculated area of circle.
     @Override
     public double getArea() {
         double area = Math.PI * Math.pow(this.radius, 2);
@@ -42,6 +43,7 @@ public class Circle extends Shape {
         return bd.doubleValue();
     }
 
+    // Calculated perimeter of circle.
     @Override
     public double getPerimeter() {
         double per = this.radius * Math.PI * 2;
@@ -54,7 +56,7 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + ", radius" + radius;
+        return super.toString() + ", radius:" + radius;
     }
 
 }

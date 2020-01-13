@@ -3,7 +3,7 @@ package sunthonputtasast.kitsakon.lab5;
 /**
  * Circle
  */
-public class TestShape {
+public class TestShape extends Circle {
     public static void main(String[] args) {
         Circle c1 = new Circle();
         System.out.println(c1);
