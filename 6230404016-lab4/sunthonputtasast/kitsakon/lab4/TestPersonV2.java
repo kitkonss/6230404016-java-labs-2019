@@ -1,7 +1,9 @@
 package sunthonputtasast.kitsakon.lab4;
 
 /**
- * TestPersonV2
+ * Created class name "Test PersonV2" 
+ * Author: Kitsakon Sunthonputtasast ID: 623040401-6
+ * Sec: 1 Date: January 6, 2019
  */
 public class TestPersonV2 {
 

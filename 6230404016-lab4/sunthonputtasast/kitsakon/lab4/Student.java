@@ -1,7 +1,9 @@
 package sunthonputtasast.kitsakon.lab4;
 
 /**
- * Student
+ * Created class name "Student" that extends from class "PersonV2" 
+ * Author: Kitsakon Sunthonputtasast ID: 623040401-6
+ * Sec: 1 Date: January 6, 2019
  */
 public class Student extends PersonV2 {
     // Created 2 variables: major and GPA.

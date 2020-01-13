@@ -1,7 +1,9 @@
 package sunthonputtasast.kitsakon.lab4;
 
 /**
- * Teacher
+ * Created class name "Teacher" that extends from class "PersonV2" 
+ * Author: Kitsakon Sunthonputtasast ID: 623040401-6
+ * Sec: 1 Date: January 6, 2019
  */
 public class Teacher extends PersonV2 {
     // Created 2 variables: teachingsubject and salary.
