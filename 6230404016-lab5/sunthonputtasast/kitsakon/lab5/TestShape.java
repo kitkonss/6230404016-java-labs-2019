@@ -1,9 +1,12 @@
+/**
+ * Create class TestShape is a driver class that contains main method.
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: January 13, 2020
+ */
+
 package sunthonputtasast.kitsakon.lab5;
 
-/**
- * Circle
- */
-public class TestShape extends Circle {
+public class TestShape {
     public static void main(String[] args) {
         Circle c1 = new Circle();
         System.out.println(c1);

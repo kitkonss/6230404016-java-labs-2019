@@ -1,16 +1,19 @@
+/**
+ * Create class TestShapeV2 is a driver class that contains main method.
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: January 13, 2020
+ */
+
 package sunthonputtasast.kitsakon.lab5;
 
-/**
- * TestShapeV2
- */
-public class TestShapeV2 extends Circle {
+public class TestShapeV2 {
     public static void main(String[] args) {
         Rectangle r1 = new Rectangle();
         System.out.println(r1);
         System.out.println("First rectangle Area = " + r1.getArea() + " Perimeter = " + r1.getPerimeter());
-        Rectangle r2 = new Rectangle(2.0, 3.0, "pink", true);
+        Rectangle r2 = new Rectangle(2.0, 3.0, "Pink", true);
         System.out.println(r2);
-        System.out.println("First rectangle Area = " + r2.getArea() + " Perimeter = " + r2.getPerimeter());
+        System.out.println("Second rectangle Area = " + r2.getArea() + " Perimeter = " + r2.getPerimeter());
 
         Shape s1;
         s1 = new Circle(2.0, "Red", false);
