@@ -8,6 +8,6 @@
 package sunthonputtasast.kitsakon.lab5;
 
 interface Drawable {
-    public abstract String draw();
+    String draw();
 
 }

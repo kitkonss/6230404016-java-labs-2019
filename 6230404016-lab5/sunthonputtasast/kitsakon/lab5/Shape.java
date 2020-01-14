@@ -43,10 +43,10 @@ abstract class Shape {
     }
 
     // Create abstract methods getArea.
-    abstract double getArea();
+    public abstract double getArea();
 
     // Create abstract methods getPerimeter.
-    abstract double getPerimeter();
+    public abstract double getPerimeter();
 
     @Override
     public String toString() {
