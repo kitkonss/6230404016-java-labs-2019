@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.SwingUtilities;
 
 public class MySimpleWindow extends JFrame {
+    // quick fix Java(536871008).
     private static final long serialVersionUID = -7714389855370776112L;
     private static final String defaultFrameTitle = "MySimpleWindow";
     private static final String cancelButtonString = "Cancel";
@@ -45,14 +46,17 @@ public class MySimpleWindow extends JFrame {
         this.add(this.mainPanel);
     }
 
+    // Set frame
     protected void setFrameFeatures() {
 
         this.pack();
 
+        // show the frame on display.
         this.setVisible(true);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // set frame location to center of display.
         this.setLocationRelativeTo(null);
     }
 
