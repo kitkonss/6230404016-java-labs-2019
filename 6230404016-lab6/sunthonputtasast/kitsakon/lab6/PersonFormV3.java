@@ -25,11 +25,13 @@ public class PersonFormV3 extends PersonFormV2 {
     // create class's variables
     private static String[] hobbie = { "Reading", "Traveling", "Cooking", "Photography" };
 
+    // create Components.
     protected JList<String> hobbieList;
     protected JLabel hobbieLabel;
     protected JMenuBar mainMenuBar;
     protected JMenu fileMenu, ConfigMenu;
     protected JMenuItem newMenuItem, openMenuItem, saveMenuItem, exitMenuItem, colorMenuItem, sizeMenuItem;
+    // ----------------------
 
     // Create default constructor.
     public PersonFormV3() {
@@ -39,25 +41,6 @@ public class PersonFormV3 extends PersonFormV2 {
     // Create constructor with 1 parameters: frameTitle.
     public PersonFormV3(String frameTitle) {
         super(frameTitle);
-    }
-
-    // method for add menu to frame.
-    protected void addMenu() {
-        // add MenuItem to fileMenu.
-        this.fileMenu.add(newMenuItem);
-        this.fileMenu.add(openMenuItem);
-        this.fileMenu.add(saveMenuItem);
-        this.fileMenu.add(exitMenuItem);
-        // add MenuItem to ConfigMenu.
-        this.ConfigMenu.add(colorMenuItem);
-        this.ConfigMenu.add(sizeMenuItem);
-
-        // add Menu to Menubar.
-        this.mainMenuBar.add(this.fileMenu);
-        this.mainMenuBar.add(this.ConfigMenu);
-
-        // add Menubar to frame.
-        this.setJMenuBar(this.mainMenuBar);
     }
 
     @Override
@@ -100,14 +83,33 @@ public class PersonFormV3 extends PersonFormV2 {
         gbc.anchor = GridBagConstraints.EAST;
         this.formPanelV1.add(this.hobbieList, gbc);
 
-        this.addMenu();
+        this.addMenus();
 
+    }
+
+    // method for add menu to frame.
+    protected void addMenus() {
+        // add MenuItem to fileMenu.
+        this.fileMenu.add(newMenuItem);
+        this.fileMenu.add(openMenuItem);
+        this.fileMenu.add(saveMenuItem);
+        this.fileMenu.add(exitMenuItem);
+        // add MenuItem to ConfigMenu.
+        this.ConfigMenu.add(colorMenuItem);
+        this.ConfigMenu.add(sizeMenuItem);
+
+        // add Menu to Menubar.
+        this.mainMenuBar.add(this.fileMenu);
+        this.mainMenuBar.add(this.ConfigMenu);
+
+        // add Menubar to frame.
+        this.setJMenuBar(this.mainMenuBar);
     }
 
     public static void createAndShowGUI() {
         PersonFormV3 personFormV3 = new PersonFormV3("Person Form V3");
         personFormV3.addComponents();
-        personFormV3.addMenu();
+        personFormV3.addMenus();
         personFormV3.setFrameFeatures();
     }
 

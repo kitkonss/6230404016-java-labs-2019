@@ -9,6 +9,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 
 import javax.swing.JPanel;
+import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -39,6 +40,8 @@ public class PersonFormV1 extends MySimpleWindow {
 
     protected JRadioButton studentButton;
     protected JRadioButton teacherButton;
+
+    protected ButtonGroup buttonGroup;
 
     protected JPanel radioButtonPanel;
     protected JPanel formPanelV1;
@@ -78,6 +81,9 @@ public class PersonFormV1 extends MySimpleWindow {
         this.studentButton = new JRadioButton("student");
         this.teacherButton = new JRadioButton("teacher");
 
+        // Create ButtonGroup.
+        this.buttonGroup = new ButtonGroup();
+
         // Create panels
         this.radioButtonPanel = new JPanel();
         this.formPanelV1 = new JPanel(new GridBagLayout());
@@ -86,6 +92,10 @@ public class PersonFormV1 extends MySimpleWindow {
 
     @Override
     protected void addComponents() {
+
+        // Add two button to buttonGroup.
+        this.buttonGroup.add(this.studentButton);
+        this.buttonGroup.add(this.teacherButton);
 
         // Add two radio buttons to the button panel.
         this.radioButtonPanel.add(this.studentButton);

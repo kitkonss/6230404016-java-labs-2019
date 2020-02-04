@@ -53,7 +53,8 @@ public class PersonFormV2 extends PersonFormV1 {
         this.sportComboBox = new JComboBox<String>(sports);
         this.sportLabel = new JLabel("Sports:");
         this.noteLabel = new JLabel("Note:");
-        this.noteTextArea = new JTextArea(2, 30);
+        this.noteTextArea = new JTextArea(
+                "21st Century skills include Critical thinking, Creativity, Collaboration, Communication, etc.", 2, 35);
         this.notePanel = new JPanel(new GridBagLayout());
         this.noteScrollPane = new JScrollPane(this.noteTextArea);
 
