@@ -1,5 +1,7 @@
 /**
- * GraphicsMoverV1
+ * Create class GraphicsMoverV1 extends MySimpleWindow
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 7, 2020
  */
 package sunthonputtasast.kitsakon.lab7;
 
@@ -14,11 +16,13 @@ class GraphicsMoverV1 extends MySimpleWindow {
 
     protected CanvasDrawerV1 canvasDrawerV1;
 
+    // create components.
     protected JButton moveUpButton;
     protected JButton moveDownButton;
     protected JButton moveLeftButton;
     protected JButton moveRightButton;
     protected JButton resetButton;
+    // ----------------------
 
     public GraphicsMoverV1() {
         super(defaultFrameTitle);
@@ -30,9 +34,13 @@ class GraphicsMoverV1 extends MySimpleWindow {
 
     @Override
     protected void createComponents() {
+        // call method createComponents.
         super.createComponents();
 
+        // create CanvasDrawerV1.
         this.canvasDrawerV1 = new CanvasDrawerV1();
+
+        // create Button.
         this.moveUpButton = new JButton("Move Up");
         this.moveDownButton = new JButton("Move Down");
         this.moveLeftButton = new JButton("Move Left");
@@ -44,18 +52,23 @@ class GraphicsMoverV1 extends MySimpleWindow {
     @Override
     protected void addComponents() {
 
+        // add each button to buttonpanel.
         buttonPanel.add(moveUpButton);
         buttonPanel.add(moveDownButton);
         buttonPanel.add(moveLeftButton);
         buttonPanel.add(moveRightButton);
         buttonPanel.add(resetButton);
 
+        // add canvasDrawerV1 to midPanel.
         super.midPanel.add(this.canvasDrawerV1);
+        // add buttonPanel to botPanel.
         super.botPanel.add(this.buttonPanel);
 
+        // set locaation of each Panel.
         super.mainPanel.add(super.midPanel, BorderLayout.CENTER);
         super.mainPanel.add(super.botPanel, BorderLayout.PAGE_END);
 
+        // add mainpanel to frame.
         this.add(super.mainPanel);
 
     }
