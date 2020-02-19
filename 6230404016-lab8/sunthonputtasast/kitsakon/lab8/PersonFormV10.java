@@ -1,16 +1,16 @@
 /**
- * PersonFormV7
+ * Create class PersonFormV10 extends PersonFormV9.
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 17, 2020
  */
 
 package sunthonputtasast.kitsakon.lab8;
-
-
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PersonFormV10 extends PersonFormV9  {
+public class PersonFormV10 extends PersonFormV9 {
 
     private static final long serialVersionUID = -3445606034458899067L;
 
@@ -29,18 +29,24 @@ public class PersonFormV10 extends PersonFormV9  {
         super.actionPerformed(event);
 
         Object obj = event.getSource();
+        // if select redMenuItem set all textfield to red color.
         if (obj == redMenuItem) {
             setColor(Color.red);
+            // if select greenMenuItem set all textfield to green color.
         } else if (obj == greenMenuItem) {
             setColor(Color.green);
+            // if select blueMenuItem set all textfield to blue color.
         } else if (obj == blueMenuItem) {
             setColor(Color.blue);
         }
 
+        // if select size16MenuItem set all textfield to size 16.
         if (obj == size16MenuItem) {
             setSize(16);
+            // if select size20MenuItem set all textfield to size 20.
         } else if (obj == size20MenuItem) {
             setSize(20);
+            // if select size24MenuItem set all textfield to size 24.
         } else if (obj == size24MenuItem) {
             setSize(24);
         }
@@ -48,6 +54,7 @@ public class PersonFormV10 extends PersonFormV9  {
     }
 
     public void setColor(Color color) {
+        // set all textfield to color.
         this.nameTextField.setForeground(color);
         this.heightTextField.setForeground(color);
         this.weightTextField.setForeground(color);
@@ -56,6 +63,7 @@ public class PersonFormV10 extends PersonFormV9  {
     }
 
     public void setSize(int size) {
+        // set all textfield to font and size.
         Font font = new Font(Font.SERIF, Font.BOLD, size);
         this.nameTextField.setFont(font);
         this.heightTextField.setFont(font);
@@ -65,7 +73,8 @@ public class PersonFormV10 extends PersonFormV9  {
     }
 
     public void addKeys() {
-        
+
+        // added accelerator keys to the menu items.
         this.redMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
         this.greenMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G, ActionEvent.CTRL_MASK));
         this.blueMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, ActionEvent.CTRL_MASK));
@@ -73,6 +82,7 @@ public class PersonFormV10 extends PersonFormV9  {
         this.size20MenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_0, ActionEvent.CTRL_MASK));
         this.size24MenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_4, ActionEvent.CTRL_MASK));
 
+        // added Mnemonic keys to the menu items.
         this.redMenuItem.setMnemonic(KeyEvent.VK_R);
         this.greenMenuItem.setMnemonic(KeyEvent.VK_G);
         this.blueMenuItem.setMnemonic(KeyEvent.VK_B);

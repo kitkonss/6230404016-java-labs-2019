@@ -1,5 +1,7 @@
 /**
- * PersonFormV7
+ * Create class PersonFormV9 extends PersonFormV8 and implements ListSelectionListener.
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 17, 2020
  */
 
 package sunthonputtasast.kitsakon.lab8;
@@ -28,15 +30,15 @@ public class PersonFormV9 extends PersonFormV8 implements ListSelectionListener 
         String message = "Selected Hobbies : ";
         int[] hobbiesIndices = hobbieList.getSelectedIndices();
 
-        if (event.getValueIsAdjusting()) {
-            for (int index : hobbiesIndices)
-                message += hobbie[index] + " " ; 
-            JOptionPane.showMessageDialog(this, message, "Person Information", JOptionPane.INFORMATION_MESSAGE,
-                    new ImageIcon(getClass().getResource("image/java.jpg")));
-        }
-        
+        // message + hobbie item that you selected.
+        for (int index : hobbiesIndices)
+            message += hobbie[index] + " ";
+        JOptionPane.showMessageDialog(this, message, "Person Information", JOptionPane.INFORMATION_MESSAGE,
+                new ImageIcon(getClass().getResource("image/java.jpg")));
+
     }
 
+    // method for add listener.
     @Override
     public void addListeners() {
         super.addListeners();

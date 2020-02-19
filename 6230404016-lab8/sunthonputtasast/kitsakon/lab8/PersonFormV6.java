@@ -1,5 +1,7 @@
 /**
- * PersonFormV6
+ * Create class PersonFormV6 extends PersonFormV5 and implements ActionListener.
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 17, 2020
  */
 package sunthonputtasast.kitsakon.lab8;
 
@@ -34,6 +36,7 @@ public class PersonFormV6 extends PersonFormV5 implements ActionListener {
         else if (this.teacherButton.isSelected())
             type += "Teacher";
 
+            // selected item from sportComboBox.
         String sport = "\nSport : " + this.sportComboBox.getSelectedItem();
 
         String hobbies = "\nHobbies :";
@@ -46,12 +49,14 @@ public class PersonFormV6 extends PersonFormV5 implements ActionListener {
         text += name + height + weight + dob + type + sport + hobbies + note;
 
         Object obj = event.getSource();
+        // if click cancelButton clear all TextField.
         if (obj == cancelButton) {
             this.nameTextField.setText("");
             this.heightTextField.setText("");
             this.weightTextField.setText("");
             this.dobTextField.setText("");
             this.noteTextArea.setText("");
+            // else if click okButton show message dialog.
         } else if (obj == okButton) {
             JOptionPane.showMessageDialog(this, text, "Person Information", JOptionPane.INFORMATION_MESSAGE,
                     new ImageIcon(getClass().getResource("image/java.jpg")));
@@ -59,7 +64,9 @@ public class PersonFormV6 extends PersonFormV5 implements ActionListener {
 
     }
 
+    // method for add listener.
     public void addListeners() {
+
         okButton.addActionListener(this);
         cancelButton.addActionListener(this);
 
