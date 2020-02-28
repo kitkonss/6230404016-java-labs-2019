@@ -1,10 +1,12 @@
+/**
+ * Create class Ball for create ball. 
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 24, 2020
+ */
 package sunthonputtasast.kitsakon.lab9;
 
 import java.awt.geom.Ellipse2D;
 
-/**
- * Ball
- */
 public class Ball extends Ellipse2D.Double {
 
     private static final long serialVersionUID = 3219757564658062159L;
@@ -25,6 +27,7 @@ public class Ball extends Ellipse2D.Double {
         this.yVelocity = yVelocity;
     }
 
+    // getter and setter for xVelocity and yVelocity.
     public int getXVelocity() {
         return this.xVelocity;
     }
@@ -40,10 +43,14 @@ public class Ball extends Ellipse2D.Double {
     public void setYVelocity(int yVelocity) {
         this.yVelocity = yVelocity;
     }
+    // -------------------------
 
     public void move() {
         this.x += xVelocity;
         this.y += yVelocity;
+    }
+
+    public void setLocation(int i, int j) {
     }
 
 }

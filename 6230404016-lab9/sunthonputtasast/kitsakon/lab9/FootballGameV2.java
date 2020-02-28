@@ -1,9 +1,10 @@
+/**
+ * Create class FootballGameV2 extends FootballGameV1 implements ActionListener, KeyListener
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: February 24, 2020
+ */
 package sunthonputtasast.kitsakon.lab9;
 
-/**
- * FootballGameV2
- */
-import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -29,13 +30,18 @@ public class FootballGameV2 extends FootballGameV1 implements ActionListener, Ke
     @Override
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
+
+        // check if pressed w keeperLeft will move up.
         if (key == KeyEvent.VK_W) {
             canvasDrawerV4.keeperLeft.moveUp();
+            // check if pressed s keeperLeft will move down.
         } else if (key == KeyEvent.VK_S) {
             canvasDrawerV4.keeperLeft.moveDown();
-        } else if (key == KeyEvent.VK_A) {
+            // check if pressed arrow_up keeperRight will move up.
+        } else if (key == KeyEvent.VK_UP) {
             canvasDrawerV4.keeperRight.moveUp();
-        } else if (key == KeyEvent.VK_D) {
+            // check if pressed arrow_down keeperRight will move down.
+        } else if (key == KeyEvent.VK_DOWN) {
             canvasDrawerV4.keeperRight.moveDown();
         }
     }
@@ -47,11 +53,13 @@ public class FootballGameV2 extends FootballGameV1 implements ActionListener, Ke
 
     public void addListenter() {
 
+        // add action listerner of each button.
         moveUpButton.addActionListener(this);
         moveDownButton.addActionListener(this);
         moveLeftButton.addActionListener(this);
         moveRightButton.addActionListener(this);
 
+        // add key listener.
         this.addKeyListener(this);
 
     }
@@ -60,12 +68,16 @@ public class FootballGameV2 extends FootballGameV1 implements ActionListener, Ke
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
 
+        // check if clicked moveUpButton keeperLeft will move up.
         if (obj == moveUpButton) {
             canvasDrawerV4.keeperLeft.moveUp();
+            // check if clicked moveDownButton keeperLeft will move down.
         } else if (obj == moveDownButton) {
             canvasDrawerV4.keeperLeft.moveDown();
+            // check if clicked moveLeftButton keeperRight will move up.
         } else if (obj == moveLeftButton) {
             canvasDrawerV4.keeperRight.moveUp();
+            // check if clicked moveRightButton keeperRight will move down.
         } else if (obj == moveRightButton) {
             canvasDrawerV4.keeperRight.moveDown();
         }
@@ -90,8 +102,8 @@ public class FootballGameV2 extends FootballGameV1 implements ActionListener, Ke
         fg2.setFonts();
         fg2.addMenu();
         fg2.createComponents();
-        fg2.addComponents();
         fg2.addListenter();
+        fg2.addComponents();
         fg2.setFrameFeatures();
 
     }

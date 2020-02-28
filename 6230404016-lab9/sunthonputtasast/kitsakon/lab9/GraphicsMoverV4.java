@@ -3,7 +3,6 @@
  * Author: Kitsakon Sunthonputtasast
  * ID: 623040401-6 Sec: 1 Date: February 24, 2020
  */
-
 package sunthonputtasast.kitsakon.lab9;
 
 import javax.swing.*;
