@@ -19,8 +19,8 @@ public class CanvasDrawerV3 extends CanvasDrawerV2 implements Runnable {
         running = new Thread(this);
 
         // random location of the ball.
-        int randomX = ThreadLocalRandom.current().nextInt(-4, 4);
-        int randomY = ThreadLocalRandom.current().nextInt(-4, 4);
+        int randomX = ThreadLocalRandom.current().nextInt(-2, 2);
+        int randomY = ThreadLocalRandom.current().nextInt(-2, 2);
 
         int xv = randomX;
         int yv = randomY;

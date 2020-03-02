@@ -18,8 +18,8 @@ public class CanvasDrawerV4 extends CanvasDrawerV3 {
 
         running = new Thread(this);
 
-        int randomX = ThreadLocalRandom.current().nextInt(-4, 4);
-        int randomY = ThreadLocalRandom.current().nextInt(-4, 4);
+        int randomX = ThreadLocalRandom.current().nextInt(-2, 2);
+        int randomY = ThreadLocalRandom.current().nextInt(-2, 2);
 
         int xv = randomX;
         int yv = randomY;
@@ -37,8 +37,8 @@ public class CanvasDrawerV4 extends CanvasDrawerV3 {
         ball.x = CANVAS_WIDTH / 2 - Ball.BALL_DIAMETER / 2;
         ball.y = CANVAS_HEIGHT / 2 - Ball.BALL_DIAMETER / 2;
 
-        ball.setXVelocity(ThreadLocalRandom.current().nextInt(-4, 4));
-        ball.setYVelocity(ThreadLocalRandom.current().nextInt(-4, 4));
+        ball.setXVelocity(ThreadLocalRandom.current().nextInt(-2, 2));
+        ball.setYVelocity(ThreadLocalRandom.current().nextInt(-2, 2));
     }
 
     @Override

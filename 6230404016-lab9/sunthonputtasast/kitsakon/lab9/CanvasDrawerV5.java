@@ -18,8 +18,8 @@ public class CanvasDrawerV5 extends CanvasDrawerV4 {
 
         running = new Thread(this);
 
-        int randomX = ThreadLocalRandom.current().nextInt(-4, 4);
-        int randomY = ThreadLocalRandom.current().nextInt(-4, 4);
+        int randomX = ThreadLocalRandom.current().nextInt(-2, 2);
+        int randomY = ThreadLocalRandom.current().nextInt(-2, 2);
 
         int xv = randomX;
         int yv = randomY;
