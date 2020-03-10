@@ -117,7 +117,6 @@ public class PersonFormV11 extends PersonFormV10 {
 
     public static void createAndShowGUI() {
         PersonFormV11 PersonFormV11 = new PersonFormV11("Person Form V11");
-
         PersonFormV11.addComponents();
         PersonFormV11.addMenus();
         PersonFormV11.addKeys();
