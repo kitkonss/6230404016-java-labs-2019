@@ -1,6 +1,13 @@
+/**
+ * Create class  PersonFormV13 extends PersonFormV12
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: March 9, 2020
+ */
 package sunthonputtasast.kitsakon.lab10;
 
 import java.awt.event.ActionEvent;
+
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -16,10 +23,13 @@ public class PersonFormV13 extends PersonFormV12 {
 
     }
 
+    // chech if number greater than min and less than max, For use in checkValid
+    // method
     protected boolean checkDecimalException(double number, double min, double max) {
         return number >= min && number <= max;
     }
 
+    // method for check if each text field are empty or not
     protected boolean checkValid() {
         String message = "";
 
@@ -84,12 +94,11 @@ public class PersonFormV13 extends PersonFormV12 {
         if (message.equals(""))
             return true;
 
-        JOptionPane.showMessageDialog(this, message);
+        JOptionPane.showMessageDialog(this, message, "Massage", JOptionPane.INFORMATION_MESSAGE,
+                new ImageIcon(getClass().getResource("images/java.png")));
         return false;
 
     }
-
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {

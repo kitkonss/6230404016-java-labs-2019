@@ -1,11 +1,13 @@
+/**
+ * Create class Person
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: March 9, 2020
+ */
 package sunthonputtasast.kitsakon.lab10;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-/**
- * Person
- */
 public class Person {
 
     protected String name;
@@ -20,6 +22,7 @@ public class Person {
         this.dob = null;
     }
 
+    // constructor with 4 parameters.
     public Person(String name, double weight, double height, LocalDate dob) {
         this.name = name;
         this.weight = weight;
@@ -27,6 +30,7 @@ public class Person {
         this.dob = dob;
     }
 
+    // getter and setter -----------
     public String getName() {
         return name;
     }
@@ -58,7 +62,9 @@ public class Person {
     public void setDob(LocalDate dob) {
         this.dob = dob;
     }
+    // -----------------------------
 
+    // method for show information.
     @Override
     public String toString() {
         Period age = Period.between(dob, LocalDate.now());

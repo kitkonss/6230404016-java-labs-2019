@@ -1,3 +1,8 @@
+/**
+ * Create class  PersonFormV12 extends PersonFormV11
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: March 9, 2020
+ */
 package sunthonputtasast.kitsakon.lab10;
 
 import java.awt.event.ActionEvent;
@@ -9,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
@@ -35,13 +41,16 @@ public class PersonFormV12 extends PersonFormV11 {
         personMap.put(nameTxtField.getText(), person);
 
         JOptionPane.showMessageDialog(this, info + "\n\nAdding this person onto the list:" + person,
-                "Person Information", JOptionPane.INFORMATION_MESSAGE);
+                "Person Information", JOptionPane.INFORMATION_MESSAGE,
+                new ImageIcon(getClass().getResource("images/java.png")));
 
     }
 
     protected String addPerson() {
+        // make string weight and height to double
         double weight = Double.parseDouble(weightTxtField.getText());
         double height = Double.parseDouble(heightTxtField.getText());
+        // make dob pattern to dd-MM-yyyy
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate dob = LocalDate.parse(dobTxtField.getText(), formatter);
         Person person = new Person(nameTxtField.getText(), weight, height, dob);
@@ -49,34 +58,44 @@ public class PersonFormV12 extends PersonFormV11 {
 
     }
 
+    // method for show person information
     protected void handleDisplayMI() {
-        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE,
+                new ImageIcon(getClass().getResource("images/java.png")));
     }
 
+    // method for show person information which collections
     protected void handleSortMI() {
         Collections.sort(personList);
-        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE,
+                new ImageIcon(getClass().getResource("images/java.png")));
     }
 
+    // method for search person information
     protected void handleSearchMI() {
         String name = JOptionPane.showInputDialog("Please enter a person name to search:");
         if (personMap.containsKey(name)) {
-            JOptionPane.showMessageDialog(this, personMap.get(name), "Message", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, personMap.get(name), "Message", JOptionPane.INFORMATION_MESSAGE,
+                    new ImageIcon(getClass().getResource("images/java.png")));
         } else {
-            JOptionPane.showMessageDialog(this, name + " is not found", "Message", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, name + " is not found", "Message", JOptionPane.INFORMATION_MESSAGE,
+                    new ImageIcon(getClass().getResource("images/java.png")));
 
         }
     }
 
+    // method for remove person information
     protected void handleRemoveMI() {
         String name = JOptionPane.showInputDialog("Please enter a person name to remove:");
         if (personMap.containsKey(name)) {
             String person = personMap.get(name);
-            JOptionPane.showMessageDialog(this, personMap.get(name), "is romoved.", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, personMap.get(name), "is romoved.", JOptionPane.INFORMATION_MESSAGE,
+                    new ImageIcon(getClass().getResource("images/java.png")));
             personList.remove(person);
             personMap.remove(name);
         } else {
-            JOptionPane.showMessageDialog(this, name + " is not found", "Message", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, name + " is not found", "Message", JOptionPane.INFORMATION_MESSAGE,
+                    new ImageIcon(getClass().getResource("images/java.png")));
 
         }
     }
@@ -119,10 +138,12 @@ public class PersonFormV12 extends PersonFormV11 {
         searchMenuItem = new JMenuItem("Search");
         removeMenuItem = new JMenuItem("Remove");
 
+        // add each menu item to menu
         dataMenu.add(displayMenuItem);
         dataMenu.add(sortMenuItem);
         dataMenu.add(searchMenuItem);
         dataMenu.add(removeMenuItem);
+        // add data menu to menu bar
         menuBar.add(dataMenu);
     }
 

@@ -1,3 +1,8 @@
+/**
+ * Create class PersonFormV11 extends PersonFormV10
+ * Author: Kitsakon Sunthonputtasast
+ * ID: 623040401-6 Sec: 1 Date: March 9, 2020
+ */
 package sunthonputtasast.kitsakon.lab10;
 
 import java.awt.*;
@@ -27,6 +32,7 @@ public class PersonFormV11 extends PersonFormV10 {
     protected void addSubMenus() {
         super.addSubMenus();
 
+        // add custom to ColorMenu
         colorMenu.add(customItem);
 
     }
@@ -35,6 +41,7 @@ public class PersonFormV11 extends PersonFormV10 {
     public void addListeners() {
         super.addListeners();
 
+        // add actionlistener to each menu
         customItem.addActionListener(this);
         fileChooser.addActionListener(this);
         openMI.addActionListener(this);
@@ -43,6 +50,7 @@ public class PersonFormV11 extends PersonFormV10 {
 
     }
 
+    // method for open file
     protected void openFileDialog() {
         int result = fileChooser.showOpenDialog(this);
 
@@ -56,6 +64,7 @@ public class PersonFormV11 extends PersonFormV10 {
         }
     }
 
+    // method for save file
     protected void saveFileDialog() {
         int result = fileChooser.showSaveDialog(this);
 
@@ -69,6 +78,7 @@ public class PersonFormV11 extends PersonFormV10 {
         }
     }
 
+    // method for check if user click each menu
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
@@ -99,7 +109,6 @@ public class PersonFormV11 extends PersonFormV10 {
 
     @Override
     protected void addComponents() {
-
         super.addComponents();
 
         customItem = new JMenuItem("Custom");
