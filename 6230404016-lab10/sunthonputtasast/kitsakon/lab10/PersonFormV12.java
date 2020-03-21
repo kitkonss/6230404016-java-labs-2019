@@ -60,14 +60,14 @@ public class PersonFormV12 extends PersonFormV11 {
 
     // method for show person information
     protected void handleDisplayMI() {
-        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE,
+        JOptionPane.showMessageDialog(this, personList, "Person List", JOptionPane.INFORMATION_MESSAGE,
                 new ImageIcon(getClass().getResource("images/java.png")));
     }
 
     // method for show person information which collections
     protected void handleSortMI() {
         Collections.sort(personList);
-        JOptionPane.showMessageDialog(this, personList, "Message", JOptionPane.INFORMATION_MESSAGE,
+        JOptionPane.showMessageDialog(this, personList, "Person List", JOptionPane.INFORMATION_MESSAGE,
                 new ImageIcon(getClass().getResource("images/java.png")));
     }
 

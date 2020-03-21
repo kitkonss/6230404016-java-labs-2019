@@ -58,9 +58,11 @@ public class PersonFormV11 extends PersonFormV10 {
 
             File file = fileChooser.getSelectedFile();
             String fileName = file.getName();
-            JOptionPane.showMessageDialog(this, String.format("Opening file %s", fileName));
+            JOptionPane.showMessageDialog(this, String.format("Opening file %s", fileName), "Message",
+                    JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("images/java.png")));
         } else if (result == JFileChooser.CANCEL_OPTION) {
-            JOptionPane.showMessageDialog(this, "Open command cencelled by user.");
+            JOptionPane.showMessageDialog(this, "Open command cencelled by user.", "Message",
+                    JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("images/java.png")));
         }
     }
 
@@ -72,9 +74,11 @@ public class PersonFormV11 extends PersonFormV10 {
 
             File file = fileChooser.getSelectedFile();
             String fileName = file.getName();
-            JOptionPane.showMessageDialog(this, String.format("Saving file %s", fileName));
+            JOptionPane.showMessageDialog(this, String.format("Saving file %s", fileName), "Message",
+                    JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("images/java.png")));
         } else if (result == JFileChooser.CANCEL_OPTION) {
-            JOptionPane.showMessageDialog(this, "Save command cencelled by user.");
+            JOptionPane.showMessageDialog(this, "Save command cencelled by user.", "Message",
+                    JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("images/java.png")));
         }
     }
 

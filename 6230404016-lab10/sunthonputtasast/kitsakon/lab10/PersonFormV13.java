@@ -106,8 +106,9 @@ public class PersonFormV13 extends PersonFormV12 {
         Object src = e.getSource();
 
         if (src == okButton) {
-            checkValid();
-            return;
+            if (!checkValid()) {
+                return;
+            }
         }
 
         super.actionPerformed(e);
